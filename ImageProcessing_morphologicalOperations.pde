@@ -1,8 +1,6 @@
 import processing.video.*;
 
 // -----------------------------------  GLOBAL VARIABLES -----------------------------------
-enum FACE_COLOR{ RED, GREEN, BLUE, YELLOW, ORANGE, MAGENTA }
-
 PShape model;
 Movie movie;
 PImage image;
@@ -23,12 +21,12 @@ void draw(){
     ImageHSV imgHSV = new ImageHSV(image);
     
     Point[] facesCenter = {
-      findFaceCenter(imgHSV, 40,  10, 9), // FACE_COLOR.ORANGE
-      findFaceCenter(imgHSV, 70,  10, 9), // FACE_COLOR.YELLOW   
-      findFaceCenter(imgHSV, 120, 30, 6), // FACE_COLOR.GREEN      
-      findFaceCenter(imgHSV, 240, 20, 6), // FACE_COLOR.BLUE      
-      findFaceCenter(imgHSV, 300, 20, 6), // FACE_COLOR.MAGENTA   
-      findFaceCenter(imgHSV, 355, 15, 9)  // FACE_COLOR.RED  
+      findFaceCenter(imgHSV, 40,  10, 9), // ORANGE
+      findFaceCenter(imgHSV, 70,  10, 9), // YELLOW   
+      findFaceCenter(imgHSV, 120, 30, 6), // GREEN      
+      findFaceCenter(imgHSV, 240, 20, 6), // BLUE      
+      findFaceCenter(imgHSV, 300, 20, 6), // MAGENTA   
+      findFaceCenter(imgHSV, 355, 15, 9)  // RED  
     };
     
     displayModel(facesCenter,model,5);
